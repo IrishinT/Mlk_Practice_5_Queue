@@ -38,6 +38,7 @@ namespace BrockerProgram
                 Console.WriteLine("1. Прогнать тестовые данные (быстрый поток от датчика)");
                 Console.WriteLine("2. Отправить пакет вручную");
                 Console.WriteLine("3. Принять (обработать) пакет");
+                Console.WriteLine("4. Запустить тесты производительности");
                 Console.WriteLine("0. Выход");
                 Console.Write("\nВыберите пункт меню: ");
 
@@ -102,7 +103,9 @@ namespace BrockerProgram
                             Console.WriteLine("[!] Буфер пуст");
                         }
                         break;
-
+                    case "4":
+                        BufferBenchmark.RunPerformanceReport();
+                        break;
                     case "0":
                         running = false;
                         Console.WriteLine("Выход из программы.");
